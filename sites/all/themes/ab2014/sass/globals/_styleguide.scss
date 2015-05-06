@@ -1,0 +1,424 @@
+* {
+    margin-top: 0;
+}
+
+html {
+    overflow-x:hidden;
+}
+
+body {
+    font-size: rem($base-font-size);
+    line-height: 1.5;
+    font-family: $base-font-family;
+    font-weight: 100;
+    color: $body_copy;
+}
+
+p, blockquote, table, hr, pre {
+    margin-bottom: $v-spacing-half;
+
+}
+
+hr {
+   display: block; 
+   height: 1px;
+   border: 0; 
+   border-top: 1px solid $line;
+   margin: rem(12px) 0; 
+   padding: 0;
+}
+
+// Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-bottom: $v-spacing-quarter;
+    font-weight: 400;
+    
+    th & {
+        font-weight: normal;
+    }
+}
+
+h1, .h1 {
+    font-size: rem(36px);
+    line-height:1.3;
+    margin-top: 0;
+    margin-bottom: $v-spacing-quarter;
+}
+
+h2, .h2 {
+    font-size: rem(28px);
+    line-height:1.3;
+}
+
+h3, .h3 {
+    font-size: rem(24px);
+    line-height:1.3;
+}
+
+h4, .h4 {
+    font-size: rem(18px);
+    line-height:1.3;
+}
+
+h5, .h5 {
+    font-size: rem(14px);
+    line-height:1;
+}
+
+h6, .h6 {
+    font-size: rem($base-font-size);
+}
+
+// Lists
+ul, ol {
+    padding-left: $v-spacing-three-quarter;
+    margin-bottom: $v-spacing-three-quarter;
+    
+    & & {
+        margin-top: $v-spacing-quarter;
+        margin-bottom: 0;
+    }
+}
+
+    li {
+        margin-bottom: $v-spacing-quarter;
+    }
+
+// Links
+a {
+    @include transition(all 0.3s ease-in-out);
+    
+    &:link,
+    &:visited {
+        color: $link;
+        text-decoration: none;
+    }
+    
+    &:hover, &:focus,
+    &.current {
+        color: $hover;
+        text-decoration: none;
+    }
+    
+    &:active {
+        color: $active;
+        text-decoration: none;
+    }
+}
+
+
+// fieldset
+fieldset {
+    border:none;
+    padding:0;  
+    margin:0;
+    
+    // Fieldsets don't shrink to fit their parent container. This fixes that.
+    min-width: 0;
+    
+    @-moz-document url-prefix() {
+        display: table-cell;
+    }
+}
+
+// Tables
+.table-wrapper {
+    //overflow-x: scroll;
+}
+
+table {
+    border: 1px solid $line;
+    border-collapse: collapse;
+}
+
+    th {
+        background: #F9F7F5;
+        padding: $v-spacing-three-quarter $v-spacing;
+        font-weight: normal;
+    }
+    
+    td {
+        padding: $v-spacing-three-quarter $v-spacing;
+        border: 1px solid $line;
+    }
+
+// Forms
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    font-family: $base-font-family;
+    font-size: rem($base-font-size);
+    @include border-radius(rem(3px));
+    max-width: 100%;
+    width: 100%;
+    color: $body_copy;
+    border: none;
+    @include transition(.3s);
+    background:#fff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    //line-height: rem(36px);
+    padding: rem(11px) rem(12px);
+}
+
+select {
+    border: 1px solid $line;
+    height: rem(38px);
+    padding-left: $v-spacing-quarter;
+    
+    @if $ltie9 == true {
+        padding-top: $v-spacing-quarter;
+        padding-bottom: $v-spacing-quarter;
+    }
+}
+
+::-webkit-input-placeholder {  
+    color: #9F9B98;
+    font-style: italic;
+}
+
+::-moz-placeholder {  
+    color: #9F9B98;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {  
+    color: #9F9B98;
+    font-style: italic;
+}
+
+textarea:focus, input:focus{
+     outline: none;
+}
+
+textarea {
+    padding: rem($v-spacing-quarter);
+}
+
+option {
+    padding: rem(11px) rem(12px);
+}
+
+label {
+    display: block;
+    margin-bottom: rem(3px);
+    
+    input + & {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: rem($v-spacing-quarter);
+    }
+}
+
+// Remove psuedo from input form buttons
+.actions, 
+.form-search {
+    button, input[type="submit"],
+    .button, %button {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+a.button {
+    color:#fff;
+}
+.button__container a,
+button, input[type="submit"],
+.button, %button {
+    background-color:$primary_blue;
+    color: $white;
+    line-height: rem(25px);
+    text-transform: uppercase;
+    text-align: center;
+    padding: rem(12px) rem(58px) rem(15px) rem(58px);
+    border: 0;
+    font-size: rem(18px);
+    outline:none;
+    position: relative;
+    @include transition(all 0.3s ease-in-out);
+    display: inline-block;
+    // &:after {
+    //     content:'';
+    //     position: absolute;
+    //     width:rem(30px);
+    //     right:rem(14px);
+    //     top: 0;
+    //     bottom: 0;
+    //     margin: auto;
+    //     height:rem(30px);
+    //     @include transition(all 0.3s ease-in-out);
+    //     background-image:url(../images/icons/button.png);
+    // }
+    &:hover, &:focus {
+        background-color: $hover;
+        color:$white;
+        // &:after {
+        //     background-image:url(../images/icons/button-hover.png);
+        // }
+    }
+    
+    &:active {
+        background-color: $active2;
+        color:$active;
+        // &:after {
+        //     background-image:url(../images/icons/button-active.png);
+        // }
+    }
+}
+
+.button__container a {
+    width: 100%;
+}
+
+.checkbox {
+    width: rem(14px);
+    label {
+        cursor: pointer;
+        position: relative;
+        width: rem(14px);
+        height: rem(14px);
+        top: 0;
+        left: 0;
+        background: #fff;
+        border:1px solid $active;
+        z-index: 1;
+        @include hide-text(right);
+        &:after {
+            content: '';
+            position: absolute;
+            width: rem(10px);
+            height: rem(10px);
+            background: transparent;
+            top: 0;
+            left: 0;
+            border: 1px solid #fff;
+        }
+    }
+    input[type=checkbox] {
+        display: none;
+        &:checked + label:after {
+            background:$active;
+        }
+    }
+}
+
+// Form validation styles
+.validation-failed {
+    border-color: $secondary3 !important;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+// Other
+blockquote {
+    margin: 0 rem($v-spacing);
+    font-size: rem(18px);
+    padding-left:rem(55px);
+    position: relative;
+    &:after {
+        content:'';
+        width:rem(40px);
+        height:rem(40px);
+        position: absolute;
+        top:0;
+        left:0;
+        //background-image: sprite-url($sprite);
+        //background-position: sprite-position($sprite, blockquote);
+        //@include sprite-dimensions($sprite, blockquote);
+    }
+    p {
+        margin:0;
+    }
+    strong {
+        font-size: rem(15px);
+    }
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+.spacer-bottom-small {
+    margin-bottom: $v-spacing-half;
+}
+// alinments
+.a-center {
+    text-align: center;
+    input {
+        text-align: center;
+    }
+}
+
+.a-right {
+    text-align: right;
+}
+
+.a-left {
+    text-align: left;
+}
+
+
+.list--no-bullet {
+    padding-left: 0;
+    
+    li {
+        list-style: none;
+    }
+}
+
+// Global input 
+.form-list {
+    padding:0;
+    margin:0;
+    em {
+        margin:0 rem(5px) 0 0;
+    }
+
+    li {
+        margin-bottom: $v-spacing-half;
+        list-style: none;
+    }
+    input {
+        border:1px solid $line;
+    }
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.no-display {
+    @extend %fully-hidden;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+iframe {
+    // The Google Ads iframe adds it's height to the page, which causes false spacing.
+    &[name=google_conversion_frame] {
+        display: none;
+    }
+}
+
+// There's a Google Leads image which can't be found but gets output so we're gonna hide it.
+img[src*='googleads'] {
+    display: none;
+}

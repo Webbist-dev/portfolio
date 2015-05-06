@@ -1,0 +1,60 @@
+* {
+	@include box-sizing(border-box);
+}
+
+.container {
+	@include container;
+	overflow: hidden;
+
+	
+	@if $ltie9 == true {
+		padding:0 $v-spacing-half;
+	}
+}
+
+
+.main {
+	background:$primary_banner;
+	padding-top: rem(114px);
+}  
+
+
+.main-sidebar {
+	@include span(9);
+	background:$white;
+	padding:$v-spacing-double $gutter-width $v-spacing-double; 
+}
+
+.sidebar {
+	@include span(3 last);
+	margin-top:$gutter-width;
+}
+ 
+.faux {
+	background: $faux;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	z-index: 0;
+}
+
+// padding top if logged in 
+.logged-in {
+	.main {
+		padding-top: rem(50px);
+	}
+} 
+
+
+.no-js .loader { 
+	display: none;  
+} 
+  
+.js .loader { 
+	display: block; 
+	position: absolute; 
+	left: 100px; 
+	top: 0; 
+}

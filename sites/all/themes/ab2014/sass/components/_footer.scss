@@ -1,0 +1,161 @@
+.footer {
+	background: $primary_dark;
+	color: $white;
+	padding: $v-spacing-double 0 $v-spacing;
+}
+
+// footer content styles 
+.footer__content {
+	@include span(4);
+}
+
+// footer social styles
+.footer__social {
+	@include span(4);
+}
+
+.footer__social__image {
+	@include span(1 of 4);
+	@include hide-text(right);
+	position: relative;
+	margin-bottom: rem(10px);
+
+	&:before {
+		content:'';
+		position: absolute;
+		left:0;
+		top:0;
+		opacity:0;
+		@include transition(0.3s ease-in-out);
+		background-repeat: no-repeat;
+	}
+}
+
+.footer__social__content {
+	@include span(3 of 4 last);
+}
+  
+.footer__social--area {
+	overflow: hidden;
+	display: block;
+	margin-bottom: $gutter-width;
+	
+	strong {
+		@include transition(0.3s ease-in-out);
+	}
+
+	br {
+		display: none;
+	}
+
+	a {
+		display: block;
+
+		// Link
+	    &:link,
+	    &:visited {
+	        color: $white;
+
+	        strong {
+				color:$primary_blue;
+			}
+	    }
+
+	    &:active, &:hover {
+	        color: $white;
+
+	        strong {
+				color:$hover;
+			}
+	    }
+
+	    &:hover {
+			.footer__social__image {
+				&:before {
+					opacity:1;
+				}
+			}
+	    }
+	}
+}
+
+// hover states for logos
+.footer__social--twitter {
+	.footer__social__image {
+		@include sprite-dimensions($sprite, twitter);
+        background-position: sprite-position($sprite, twitter);
+		&:before {
+			@include sprite-dimensions($sprite, twitter-hover);
+            background-position: sprite-position($sprite, twitter-hover);
+		}
+	}
+}
+
+.footer__social--linkedin {
+	.footer__social__image {
+		@include sprite-dimensions($sprite, linkedin);
+        background-position: sprite-position($sprite, linkedin);
+		&:before {
+			@include sprite-dimensions($sprite, linkedin-hover);
+            background-position: sprite-position($sprite, linkedin-hover);
+		}
+	}
+}
+
+.footer__social--blog {
+	margin-bottom: 0;
+	.footer__social__image {
+		@include sprite-dimensions($sprite, blog);
+        background-position: sprite-position($sprite, blog);
+		&:before {
+			@include sprite-dimensions($sprite, blog-hover);
+            background-position: sprite-position($sprite, blog-hover);
+		}
+	}
+}
+
+// footer menu styles
+.footer__menu {
+	@include span(4 last);
+
+	li.leaf {
+		list-style: none;
+		
+		a {
+			color:$link;
+			display: block;
+			text-transform: uppercase;
+			font-size: rem(15px);
+			font-weight: bold;
+			margin-bottom: rem(20px);
+
+			&:hover {
+				color:$hover;
+
+				.description {
+					color:$white;
+				}
+			}
+		}   
+
+		.description {
+			display: block;
+			color:$white;
+			text-transform: none;
+			font-size: rem(14px);
+			font-weight: normal;
+		}
+	}
+}
+
+.footer__suffix {
+	background:$primary_dark;
+	font-size:rem(14px);
+	text-align: center;
+	color:$white;
+	padding:$v-spacing-quarter 0 $v-spacing;
+
+	p {
+		margin-bottom: 0;
+	}
+}

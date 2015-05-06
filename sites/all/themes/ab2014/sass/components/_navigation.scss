@@ -1,0 +1,47 @@
+// Navigation
+
+// Header navigation 
+.header {
+	
+	ul.menu {
+		margin: 0;
+		padding: 0;
+		text-align: right;
+
+		li.leaf {
+			margin:0;
+			padding:0;
+			list-style: none;
+			display: inline-block;
+			margin-left: $v-spacing-half;
+			
+			.description {
+				display: none;
+			}
+
+			a {
+				color:$white;
+				text-transform: uppercase;
+				display: block;
+				padding:rem(46px) rem(20px) rem(47px);
+				position: relative;
+				@include transition(all 0.4s ease-in-out);	
+			}
+		}
+	}
+
+	&.scrolling {
+		ul li.leaf a {
+			padding:rem(24px) rem(20px) rem(23px);
+		}
+	}
+}
+
+#line { 
+	position: absolute; 
+	bottom: 0px; 
+	left: 0; 
+	width: 100px; 
+	height: 3px; 
+	background: $primary_blue; 
+}

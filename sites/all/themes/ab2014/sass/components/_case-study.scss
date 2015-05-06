@@ -1,0 +1,25 @@
+.main--case-study {
+	background:$white;
+}
+
+
+.case-study {
+	position: relative;
+
+	.container {
+		position: relative;
+		z-index:10;
+	}
+}
+
+.testimonial {
+	background:$primary_banner;
+	margin-bottom: $gutter-width;
+	padding:$gutter-width;
+}
+.testimonial__content {
+	
+}
+.testimonial__author {
+	
+}

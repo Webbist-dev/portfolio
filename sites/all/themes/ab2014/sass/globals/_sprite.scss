@@ -1,0 +1,8 @@
+.sprite,
+%sprite,
+.sprite--pa:after,
+%sprite--pa:after,
+.sprite--pb:before,
+%sprite--pb:before {
+    background-image: sprite-url($sprite);
+}

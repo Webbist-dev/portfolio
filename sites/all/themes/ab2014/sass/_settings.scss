@@ -1,0 +1,85 @@
+
+// =============
+
+// Compass settings
+// ================
+$browser-default-font-size: 16px;
+$base-font-size: 15px; // Set the base font size for the site's body text.
+
+@import 'susy';
+
+// Grid/layout settings
+// =============
+// Gutters
+$gutter-width: rem(24px);
+// Susy
+$susy: (
+  flow: ltr, 
+  output: float, 
+  math: fluid, 
+  column-width: rem(80px), 
+  container: auto, 
+  container-position: center, 
+  last-flow: to,
+  columns: 12,
+  gutters: 3/10,
+  gutter-position: after, 
+  global-box-sizing: content-box, 
+);
+
+
+// Fonts
+// Colour pallette
+// ===============
+$body_copy: rgb(76, 68, 69);
+
+// Primary colours
+// ===============
+$primary_dark: #222222; // Dark
+$primary_blue: #9bbfce; // Blue 
+$primary_banner: #e1e1e1; // Banner grey
+$faux:#2f3238;
+$accent1: rgb(244, 239, 236);
+$accent2: rgb(249, 247, 245);
+
+$white:#fff;
+// Link & Hover
+// ===============
+$link: $primary_blue;
+$hover:#6995ab;
+$active:#81d1f3;
+$active2: #2785ac;
+
+// Line
+// ===============
+$line:$primary_dark;
+$background:$primary_dark;
+// Secondary
+// ===============
+$secondary1:rgb(107, 162, 223);
+$secondary2:rgb(255, 149, 170);
+$secondary3:rgb(178, 0, 0);
+
+// Secondary Hover
+// ===============
+$secondary1_hover:rgb(129, 179, 226);
+$secondary2_hover:rgb(254, 150, 171);
+$secondary3_hover:rgb(206, 20, 8);
+
+// Font settings
+// ===============
+$base-font-family: 'Open Sans', Verdana, Arial, sans-serif;
+$bold: $base-font-family;
+$v-spacing: $gutter-width;
+$v-spacing-half: $v-spacing / 2;
+$v-spacing-double: $v-spacing * 2;
+$v-spacing-triple: $v-spacing * 3;
+$v-spacing-quarter: $v-spacing / 4;
+$v-spacing-three-quarter: $v-spacing * .75;
+
+// Image sprites
+// ===============
+$sprite: sprite-map("sprite/*.png", $layout: smart);
+
+
+$webkit: -webkit-min-device-pixel-ratio 0;
