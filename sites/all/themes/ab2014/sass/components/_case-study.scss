@@ -2,6 +2,16 @@
 	background:$white;
 }
 
+.unavailable {
+	background-color:$primary_banner;
+    color: $faux;
+    line-height: rem(25px);
+    text-transform: uppercase;
+    text-align: center;
+    padding: rem(12px) rem(58px) rem(15px) rem(58px);
+    font-size: rem(14px);
+    display: block;
+}
 
 .case-study {
 	position: relative;
@@ -10,16 +20,50 @@
 		position: relative;
 		z-index:10;
 	}
+
+	.sidebar {
+		
+		.button {
+			width: 100%;
+			display: block;
+			margin-bottom: $gutter-width;
+			font-size: rem(14px);
+		}
+
+		.button__container {
+			margin-bottom: $gutter-width;
+
+			a {
+				font-size: rem(14px);
+			}
+		}
+	}
 }
 
 .testimonial {
-	background:$primary_banner;
+	background:$grey;
+	box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
 	margin-bottom: $gutter-width;
 	padding:$gutter-width;
 }
+
 .testimonial__content {
+	clear: both;
 	
+	&:before {
+		content:'';
+		width: rem(40px);
+		height: rem(34px);
+		display: block;
+		margin:0 auto $gutter-width;
+        background-position: sprite-position($sprite, quote);
+	}
+
+	p {
+
+	}
 }
+
 .testimonial__author {
-	
+	float: right;
 }

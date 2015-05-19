@@ -40,7 +40,7 @@ function ab2014_menu_link(array $variables) {
 function ab2014_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'search_block_form') {
     // Alternative (HTML5) placeholder attribute instead of using the javascript
-        $form['search_block_form']['#attributes']['placeholder'] = t('Search our website...');
+        $form['search_block_form']['#attributes']['placeholder'] = t('Search my website...');
     }
      if ($form_id == 'simplenews_block_form_1') {
     // Alternative (HTML5) placeholder attribute instead of using the javascript
@@ -93,6 +93,11 @@ function ab2014_form_user_login_alter(&$form, &$form_state) {
   );  
 }
 
+
+function ab2014_field_collection_view($variables) {
+  $element = $variables['element'];
+  return $element['#children'];
+}
 /**
  * Implements hook_modernizr_load_alter().
  *

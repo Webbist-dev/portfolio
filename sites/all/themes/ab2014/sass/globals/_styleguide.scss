@@ -261,6 +261,7 @@ button, input[type="submit"],
     //     @include transition(all 0.3s ease-in-out);
     //     background-image:url(../images/icons/button.png);
     // }
+
     &:hover, &:focus {
         background-color: $hover;
         color:$white;
@@ -280,6 +281,16 @@ button, input[type="submit"],
 
 .button__container a {
     width: 100%;
+    display: block;
+}
+
+.button_alt a {
+    background-color:$primary_banner;
+    color:$faux;
+
+    &:hover, &:focus {
+        background-color:$white;
+    }
 }
 
 .checkbox {

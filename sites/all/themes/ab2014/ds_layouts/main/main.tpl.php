@@ -27,7 +27,9 @@
   <?php endif; ?>
 
    <<?php print $main_prefix_wrapper; ?> class="page-header<?php print $main_prefix_classes; ?>">
+    <div class="slideshow" id="slideshow">
       <?php print $main_prefix; ?>
+    </div>
     </<?php print $main_prefix_wrapper; ?>>
 <div class="case-study">
   <div class="container">
@@ -37,6 +39,16 @@
   
    <<?php print $sidebar_wrapper; ?> class="sidebar<?php print $sidebar_classes; ?>">
       <?php print $sidebar; ?>
+
+        <?php 
+        if($node->field_hire_me[LANGUAGE_NONE][0]['value'] == 1)
+        { 
+            echo('<a href="/contact" class="button">Hire me</a>'); 
+        } else {
+            echo('<span class="unavailable">Fully booked</a>');
+        }
+        ?>
+
     </<?php print $sidebar_wrapper; ?>> 
   </div>
   <div class="faux"></div>

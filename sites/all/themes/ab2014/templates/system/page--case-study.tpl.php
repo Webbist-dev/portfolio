@@ -100,7 +100,6 @@
 
 
 <!-- Main -->
-
 <main id="main" role="main" class="main main--case-study clearfix">
     <div class="main__content">
         <?php if ($page['content']): ?>
@@ -124,4 +123,6 @@
         <p><?php print t('@year', array('@year' => date("Y"))); ?> &copy; Alex Bennett - UI Developer based in Leeds. </p>
     </div>
 </div>
+
+
 
