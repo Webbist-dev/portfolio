@@ -34,7 +34,7 @@ stylesheets[print][] = 'stylesheets/print.css'
 ; scripts[] = 'components/formalize/assets/js/jquery.formalize.min.js'
 
 scripts[] = ../../libraries/flexslider/jquery.flexslider-min.js
-scripts[] = js/script.js
+scripts[] = javascripts/script.js
 
 ; ========================================
 ; Modernizr

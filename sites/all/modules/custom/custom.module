@@ -33,12 +33,23 @@ function custom_node_view($node, $view_mode, $langcode) {
     $node->content['#attached']['js'][] = array
     (
       'type' => 'file',
+      'data' => drupal_get_path('module', 'custom') . '/js/modernizr/modernizr.js',
+      'group' => JS_THEME,
+      'preprocess' => TRUE,
+      'scope' => 'header',
+      'weight' => '999',
+    );
+    $node->content['#attached']['js'][] = array
+    (
+      'type' => 'file',
       'data' => drupal_get_path('module', 'custom') . '/js/global/header.js',
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'scope' => 'footer',
       'weight' => '999',
     );
+
+
     // $node->content['#attached']['js'][] = array
     // (
     //   'type' => 'file',
@@ -48,25 +59,27 @@ function custom_node_view($node, $view_mode, $langcode) {
     //   'scope' => 'footer',
     //   'weight' => '999',
     // );
-    $node->content['#attached']['js'][] = array
-    (
-      'type' => 'file',
-      'data' => drupal_get_path('module', 'custom') . '/js/global/line.js',
-      'group' => JS_THEME,
-      'preprocess' => TRUE,
-      'scope' => 'footer',
-      'weight' => '999',
-    );
+
+
+    // $node->content['#attached']['js'][] = array
+    // (
+    //   'type' => 'file',
+    //   'data' => drupal_get_path('module', 'custom') . '/js/global/line.js',
+    //   'group' => JS_THEME,
+    //   'preprocess' => TRUE,
+    //   'scope' => 'footer',
+    //   'weight' => '999',
+    // );
 
   if($node->type == 'case_study') {
     $node->content['#attached']['js'][] = array
     (
       'type' => 'file',
-      'data' => drupal_get_path('module', 'custom') . '/js/global/tiltslider.js',
+      'data' => drupal_get_path('module', 'custom') . '/js/global/prototype.js',
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'scope' => 'footer',
-      'weight' => '999',
+      'weight' => '997',
     );
     $node->content['#attached']['js'][] = array
     (
@@ -80,12 +93,14 @@ function custom_node_view($node, $view_mode, $langcode) {
     $node->content['#attached']['js'][] = array
     (
       'type' => 'file',
-      'data' => drupal_get_path('module', 'custom') . '/js/global/prototype.js',
+      'data' => drupal_get_path('module', 'custom') . '/js/global/tiltslider.js',
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'scope' => 'footer',
-      'weight' => '997',
+      'weight' => '999',
     );
+
+    
   }
   //drupal_add_js(drupal_get_path('module', 'custom') . 'js/global/header.js');
   //drupal_add_js(drupal_get_path('module', 'custom') . 'js/global/loader.js');

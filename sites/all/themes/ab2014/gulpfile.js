@@ -52,15 +52,15 @@ gulp.task('js', function() {
         ])
         // .pipe(gulpif(env === 'development', sourcemaps.init()))
         .pipe(gulpif(env === 'production', uglify()))
-        .pipe(concat('main.js'))
+        .pipe(concat('script.js'))
         // .pipe(gulpif(env === 'development', sourcemaps.write()))
-        .pipe(gulp.dest('javascripts'))
+        .pipe(gulp.dest('js'))
         .pipe(browserSync.reload({stream:true}));
 });
 
 // Clean
 gulp.task('clean', function() {
-    return gulp.src(['stylesheets/styles.css', 'javascripts/main.js'], {read: false})
+    return gulp.src(['stylesheets/styles.css', 'js/script.js'], {read: false})
         .pipe(clean());
 });
 

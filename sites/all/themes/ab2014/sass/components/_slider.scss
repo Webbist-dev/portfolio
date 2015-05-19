@@ -2,7 +2,7 @@
 	position: relative;
 }
 
-.tiltslides {
+.slides {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -14,11 +14,11 @@
 	color: #333;
 }
 
-.no-js .tiltslides {
+.no-js .slides {
 	height: auto;
 }
 
-.tiltslides > li {
+.slides > li {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -27,7 +27,7 @@
 	perspective: 1600px;
 }
 
-.no-js .tiltslides > li {
+.no-js .slides > li {
 	position: relative;
 	visibility: visible;
 }
@@ -57,7 +57,7 @@
 	background-color: #aaa;
 }
 
-.tiltslides .description {
+.slides .description {
 	width: 50%;
 	padding: 2em 4em;
 	font-size: 1.5em;
@@ -114,12 +114,12 @@
 }
 
 /* Show/Hide */
-.tiltslides > li.current,
-.tiltslides > li.show {
+.slides > li.current,
+.slides > li.show {
 	visibility: visible;
 }
 
-.tiltslides .description {
+.slides .description {
 	transition: opacity 0.75s;
 }
 
@@ -641,7 +641,7 @@
 }
 
 @media screen and (max-width: 24em) {
-	.tiltslides {
+	.slides {
 		height: 320px;
 	}
 

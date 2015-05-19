@@ -28,8 +28,7 @@
 
 
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function() {
 
-	$('.tiltslides li:first-of-type').addClass('current');
 
-});    
+});     

@@ -1,3 +1,17 @@
+/**
+ * tiltSlider.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2014, Codrops
+ * http://www.codrops.com
+ */
+;( function( window ) {
+
+    'use strict';
+
     // https://gist.github.com/edankwan/4389601
     Modernizr.addTest('csstransformspreserve3d', function () {
         var prop = Modernizr.prefixed('transformStyle');
@@ -44,7 +58,7 @@
         this.animEffectsOut = ['moveUpOut','moveDownOut','slideUpOut','slideDownOut','slideLeftOut','slideRightOut'];
         this.animEffectsIn = ['moveUpIn','moveDownIn','slideUpIn','slideDownIn','slideLeftIn','slideRightIn'];
         // the items
-        this.items = this.el.querySelector( 'ol.tiltslides' ).children;
+        this.items = this.el.querySelector( 'ol.slides' ).children;
         // total items
         this.itemsCount = this.items.length;
         if( !this.itemsCount ) return;
@@ -176,4 +190,7 @@
 
     // add to global namespace
     window.TiltSlider = TiltSlider;
-}
+
+})( window );
+
+new TiltSlider( document.getElementById( 'slideshow' ) );
