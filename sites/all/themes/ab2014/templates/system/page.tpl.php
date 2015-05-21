@@ -117,7 +117,7 @@
 
 <!-- Main -->
 
-<main id="main" role="main" class="main clearfix">
+<main id="main" role="main" class="main main-spacing clearfix">
     <div class="container">
         <div class="main__content">
             <?php if ($page['content']): ?>
@@ -128,7 +128,7 @@
 </main>
 
 <?php if ($page['sidebar']): ?>
-    <aside id="sidebar" role="sidebar" class="main clearfix">
+    <aside id="sidebar" role="sidebar" class="sidebar clearfix">
         <?php print render($page['sidebar']); ?>
     </aside>
 <?php endif; ?>

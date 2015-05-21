@@ -31,19 +31,18 @@ $susy: (
 // Fonts
 // Colour pallette
 // ===============
-$body_copy: rgb(76, 68, 69);
+$body_copy: #222222;
 
 // Primary colours
 // ===============
-$primary_dark: #222222; // Dark
+$primary_dark: $body_copy; // Dark
 $primary_blue: #9bbfce; // Blue 
 $primary_banner: #e1e1e1; // Banner grey
+
 $faux:#2f3238;
 $grey:#fafafa;
-$accent1: rgb(244, 239, 236);
-$accent2: rgb(249, 247, 245);
-
 $white:#fff;
+
 // Link & Hover
 // ===============
 $link: $primary_blue;
@@ -55,17 +54,11 @@ $active2: #2785ac;
 // ===============
 $line:$primary_dark;
 $background:$primary_dark;
-// Secondary
-// ===============
-$secondary1:rgb(107, 162, 223);
-$secondary2:rgb(255, 149, 170);
-$secondary3:rgb(178, 0, 0);
 
-// Secondary Hover
-// ===============
-$secondary1_hover:rgb(129, 179, 226);
-$secondary2_hover:rgb(254, 150, 171);
-$secondary3_hover:rgb(206, 20, 8);
+// Tiltslider colors
+$tiltHover:#333;
+$tiltCurrent:#222;
+$tilt:#aaa;
 
 // Font settings
 // ===============

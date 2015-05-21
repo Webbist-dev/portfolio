@@ -103,7 +103,7 @@
 <?php endif; ?>
 <!-- Main -->
 <div class="container">
-    <main id="main" role="main" class="main clearfix">
+    <main id="main" role="main" class="main main-spacing clearfix">
         <?php if ($page['content']): ?>
             <?php print render($page['content']); ?>
         <?php endif; ?>

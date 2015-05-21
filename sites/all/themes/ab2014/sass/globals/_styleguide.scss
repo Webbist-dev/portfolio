@@ -78,11 +78,6 @@ h6, .h6 {
 ul, ol {
     padding-left: $v-spacing-three-quarter;
     margin-bottom: $v-spacing-three-quarter;
-    
-    & & {
-        margin-top: $v-spacing-quarter;
-        margin-bottom: 0;
-    }
 }
 
     li {
@@ -91,7 +86,6 @@ ul, ol {
 
 // Links
 a {
-    @include transition(all 0.3s ease-in-out);
     
     &:link,
     &:visited {
@@ -325,11 +319,6 @@ button, input[type="submit"],
     }
 }
 
-// Form validation styles
-.validation-failed {
-    border-color: $secondary3 !important;
-}
-
 img {
     max-width: 100%;
     width: auto;
@@ -432,4 +421,22 @@ iframe {
 // There's a Google Leads image which can't be found but gets output so we're gonna hide it.
 img[src*='googleads'] {
     display: none;
+}
+
+// padding top if logged in 
+.logged-in {
+    .main {
+        padding-top: rem(50px);
+    }
+} 
+
+.no-js .loader { 
+    display: none;  
+} 
+  
+.js .loader { 
+    display: block; 
+    position: absolute; 
+    left: 100px; 
+    top: 0; 
 }

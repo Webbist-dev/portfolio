@@ -12,12 +12,9 @@
 	}
 }
 
-
-.main {
-	background:$primary_banner;
+.main-spacing {
 	padding-top: rem(114px);
-}  
-
+}
 
 .main-sidebar {
 	@include span(9);
@@ -30,7 +27,14 @@
 	@include span(3 last);
 	margin-top:$gutter-width;
 }
- 
+
+.main,
+.main_prefix {
+	background:$primary_banner;
+}  
+
+// Faux column 
+// ===========
 .faux {
 	background: $faux;
 	bottom: 0;
@@ -41,21 +45,3 @@
 	z-index: 0;
 }
 
-// padding top if logged in 
-.logged-in {
-	.main {
-		padding-top: rem(50px);
-	}
-} 
-
-
-.no-js .loader { 
-	display: none;  
-} 
-  
-.js .loader { 
-	display: block; 
-	position: absolute; 
-	left: 100px; 
-	top: 0; 
-}

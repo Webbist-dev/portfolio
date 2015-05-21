@@ -26,11 +26,6 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-   <<?php print $main_prefix_wrapper; ?> class="page-header<?php print $main_prefix_classes; ?>">
-    <div class="slideshow" id="slideshow">
-      <?php print $main_prefix; ?>
-    </div>
-    </<?php print $main_prefix_wrapper; ?>>
 <div class="case-study">
   <div class="container">
     <<?php print $main_wrapper; ?> class="main-sidebar<?php print $main_classes; ?>">
