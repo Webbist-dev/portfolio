@@ -90,7 +90,8 @@
 }
 
 .tiltview a,
-.tiltview a img {
+.tiltview a img,
+.tiltview img {
 	max-width: 100%;
 	display: block;
 	margin: 0 auto;
@@ -115,7 +116,7 @@
 
 /* Show/Hide */
 .slides > li.current,
-.slides > li.show {
+.slides > li.mShow {
 	visibility: visible;
 }
 
@@ -128,7 +129,7 @@
 	opacity: 1;
 }
 
-.hide .description {
+.mHide .description {
 	opacity: 0;
 }
 
@@ -140,12 +141,12 @@
 /***********************/
 /* Move up */
 /***********************/
-.hide[data-effect-out="moveUpOut"] .tiltview a {
+.mHide[data-effect-out="moveUpOut"] .tiltview a {
 	-webkit-animation: moveUpOut 1.5s both;
 	animation: moveUpOut 1.5s both;
 }
 
-.hide[data-effect-out="moveUpOut"] .tiltview a:nth-child(2) {
+.mHide[data-effect-out="moveUpOut"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.25s;
 	animation-delay: 0.25s;
 }
@@ -173,12 +174,12 @@
 	}
 }
 
-.show[data-effect-in="moveUpIn"] .tiltview a {
+.mShow[data-effect-in="moveUpIn"] .tiltview a {
 	-webkit-animation: moveUpIn 1.5s 0.5s both;
 	animation: moveUpIn 1.5s 0.5s both;
 }
 
-.show[data-effect-in="moveUpIn"] .tiltview a:nth-child(2) {
+.mShow[data-effect-in="moveUpIn"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.75s;
 	animation-delay: 0.75s;
 }
@@ -216,12 +217,12 @@
 /***********************/
 /* Move down */
 /***********************/
-.hide[data-effect-out="moveDownOut"] .tiltview a {
+.mHide[data-effect-out="moveDownOut"] .tiltview a {
 	-webkit-animation: moveDownOut 1.5s both;
 	animation: moveDownOut 1.5s both;
 }
 
-.hide[data-effect-out="moveDownOut"] .tiltview a:nth-child(2) {
+.mHide[data-effect-out="moveDownOut"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.25s;
 	animation-delay: 0.25s;
 }
@@ -249,12 +250,12 @@
 	}
 }
 
-.show[data-effect-in="moveDownIn"] .tiltview a {
+.mShow[data-effect-in="moveDownIn"] .tiltview a {
 	-webkit-animation: moveDownIn 1.5s 0.5s both;
 	animation: moveDownIn 1.5s 0.5s both;
 }
 
-.show[data-effect-in="moveDownIn"] .tiltview a:nth-child(2) {
+.mShow[data-effect-in="moveDownIn"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.75s;
 	animation-delay: 0.75s;
 }
@@ -292,12 +293,12 @@
 /***********************/
 /* Slide up */
 /***********************/
-.hide[data-effect-out="slideUpOut"] .tiltview a {
+.mHide[data-effect-out="slideUpOut"] .tiltview a {
 	-webkit-animation: slideUpOut 1.5s both;
 	animation: slideUpOut 1.5s both;
 }
 
-.hide[data-effect-out="slideUpOut"] .tiltview a:nth-child(2) {
+.mHide[data-effect-out="slideUpOut"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.25s;
 	animation-delay: 0.25s;
 }
@@ -325,12 +326,12 @@
 	}
 }
 
-.show[data-effect-in="slideUpIn"] .tiltview a {
+.mShow[data-effect-in="slideUpIn"] .tiltview a {
 	-webkit-animation: slideUpIn 1.5s 0.5s both;
 	animation: slideUpIn 1.5s 0.5s both;
 }
 
-.show[data-effect-in="slideUpIn"] .tiltview a:nth-child(2) {
+.mShow[data-effect-in="slideUpIn"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.75s;
 	animation-delay: 0.75s;
 }
@@ -368,13 +369,13 @@
 /***********************/
 /* Slide down */
 /***********************/
-.hide[data-effect-out="slideDownOut"] .tiltview a {
+.mHide[data-effect-out="slideDownOut"] .tiltview a {
 	-webkit-animation: slideDownOut 1.5s both;
 	animation: slideDownOut 1.5s both;
 }
 
-.hide[data-effect-out="slideDownOut"] .tiltview.row a:nth-child(2),
-.hide[data-effect-out="slideDownOut"] .tiltview.col a:first-child {
+.mHide[data-effect-out="slideDownOut"] .tiltview.row a:nth-child(2),
+.mHide[data-effect-out="slideDownOut"] .tiltview.col a:first-child {
 	-webkit-animation-delay: 0.25s;
 	animation-delay: 0.25s;
 }
@@ -402,13 +403,13 @@
 	}
 }
 
-.show[data-effect-in="slideDownIn"] .tiltview a {
+.mShow[data-effect-in="slideDownIn"] .tiltview a {
 	-webkit-animation: slideDownIn 1.5s 0.5s both;
 	animation: slideDownIn 1.5s 0.5s both;
 }
 
-.show[data-effect-in="slideDownIn"] .tiltview.row a:nth-child(2),
-.show[data-effect-in="slideDownIn"] .tiltview.col a:first-child {
+.mShow[data-effect-in="slideDownIn"] .tiltview.row a:nth-child(2),
+.mShow[data-effect-in="slideDownIn"] .tiltview.col a:first-child {
 	-webkit-animation-delay: 0.75s;
 	animation-delay: 0.75s;
 }
@@ -446,12 +447,12 @@
 /***********************/
 /* Slide left */
 /***********************/
-.hide[data-effect-out="slideLeftOut"] .tiltview a {
+.mHide[data-effect-out="slideLeftOut"] .tiltview a {
 	-webkit-animation: slideLeftOut 1.5s both;
 	animation: slideLeftOut 1.5s both;
 }
 
-.hide[data-effect-out="slideLeftOut"] .tiltview a:nth-child(2) {
+.mHide[data-effect-out="slideLeftOut"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.25s;
 	animation-delay: 0.25s;
 }
@@ -479,12 +480,12 @@
 	}
 }
 
-.show[data-effect-in="slideLeftIn"] .tiltview a {
+.mShow[data-effect-in="slideLeftIn"] .tiltview a {
 	-webkit-animation: slideLeftIn 1.5s 0.5s both;
 	animation: slideLeftIn 1.5s 0.5s both;
 }
 
-.show[data-effect-in="slideLeftIn"] .tiltview a:nth-child(2) {
+.mShow[data-effect-in="slideLeftIn"] .tiltview a:nth-child(2) {
 	-webkit-animation-delay: 0.75s;
 	animation-delay: 0.75s;
 }
@@ -522,13 +523,13 @@
 /***********************/
 /* Slide right */
 /***********************/
-.hide[data-effect-out="slideRightOut"] .tiltview a {
+.mHide[data-effect-out="slideRightOut"] .tiltview a {
 	-webkit-animation: slideRightOut 1.5s both;
 	animation: slideRightOut 1.5s both;
 }
 
-.hide[data-effect-out="slideRightOut"] .tiltview.col a:nth-child(2),
-.hide[data-effect-out="slideRightOut"] .tiltview.row a:first-child {
+.mHide[data-effect-out="slideRightOut"] .tiltview.col a:nth-child(2),
+.mHide[data-effect-out="slideRightOut"] .tiltview.row a:first-child {
 	-webkit-animation-delay: 0.25s;
 	animation-delay: 0.25s;
 }
@@ -556,13 +557,13 @@
 	}
 }
 
-.show[data-effect-in="slideRightIn"] .tiltview a {
+.mShow[data-effect-in="slideRightIn"] .tiltview a {
 	-webkit-animation: slideRightIn 1.5s 0.5s both;
 	animation: slideRightIn 1.5s 0.5s both;
 }
 
-.show[data-effect-in="slideRightIn"] .tiltview.col a:nth-child(2),
-.show[data-effect-in="slideRightIn"] .tiltview.row a:first-child {
+.mShow[data-effect-in="slideRightIn"] .tiltview.col a:nth-child(2),
+.mShow[data-effect-in="slideRightIn"] .tiltview.row a:first-child {
 	-webkit-animation-delay: 0.75s;
 	animation-delay: 0.75s;
 }
@@ -598,10 +599,10 @@
 }
 
 /* Fallback for no 3D Transforms and no preserve-3d */
-.no-csstransformspreserve3d .show .tiltview a,
-.no-csstransformspreserve3d .hide .tiltview a,
-.no-csstransforms3d .show .tiltview a,
-.no-csstransforms3d .hide .tiltview a {
+.no-csstransformspreserve3d .mShow .tiltview a,
+.no-csstransformspreserve3d .mHide .tiltview a,
+.no-csstransforms3d .mShow .tiltview a,
+.no-csstransforms3d .mHide .tiltview a {
 	-webkit-animation: none !important;
 	animation: none !important;
 }

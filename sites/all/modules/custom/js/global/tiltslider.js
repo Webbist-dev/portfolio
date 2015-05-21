@@ -144,7 +144,7 @@
             onEndAnimationCurrentItem = function() {
                 ++animEndCurrentCnt;
                 var endFn = function() {
-                    classie.removeClass( currentItem, 'hide' );
+                    classie.removeClass( currentItem, 'mHide' );
                     classie.removeClass( currentItem, 'current' );
                     isFinished();
                 };
@@ -161,7 +161,7 @@
             onEndAnimationNextItem = function() {
                 ++animEndNextCnt;
                 var endFn = function() {
-                    classie.removeClass( nextItem, 'show' );
+                    classie.removeClass( nextItem, 'mShow' );
                     classie.addClass( nextItem, 'current' );
                     isFinished();
                 };
@@ -175,8 +175,8 @@
                 }
             };
 
-        classie.addClass( currentItem, 'hide' );
-        classie.addClass( nextItem, 'show' );
+        classie.addClass( currentItem, 'mHide' );
+        classie.addClass( nextItem, 'mShow' );
 
         if( isSupported ) {
             currentItem.addEventListener( animEndEventName, onEndAnimationCurrentItem );

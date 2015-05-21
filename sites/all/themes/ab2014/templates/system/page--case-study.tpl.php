@@ -98,6 +98,14 @@
     </div>
 <?php endif; ?>
 
+<!-- Main prefix -->
+<?php if ($page['main_prefix']): ?>
+    <div class="main_prefix" role="banner">
+        <div class="slideshow" id="slideshow">
+            <?php print render($page['main_prefix']); ?>
+        </div>
+    </div>
+<?php endif; ?>
 
 <!-- Main -->
 <main id="main" role="main" class="main main--case-study clearfix">
