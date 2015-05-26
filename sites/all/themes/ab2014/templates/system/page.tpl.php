@@ -91,7 +91,7 @@
 <?php endif; ?>
 
 <!-- Standard Header -->
-<div class="standard__header">
+<div class="standard__header main-spacing">
     <div class="container">
         <div class="standard__title">
              <h1><?php print $title; ?></h1>
@@ -117,7 +117,7 @@
 
 <!-- Main -->
 
-<main id="main" role="main" class="main main-spacing clearfix">
+<main id="main" role="main" class="main clearfix">
     <div class="container">
         <div class="main__content">
             <?php if ($page['content']): ?>

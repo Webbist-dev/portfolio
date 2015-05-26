@@ -109,7 +109,9 @@
 <!-- Main -->
 <main id="main" role="main" class="main main-spacing clearfix">
     <?php if ($page['content']): ?>
-        <?php print render($page['content']); ?>
+        <div class="container">
+            <?php print render($page['content']); ?>
+        </div>
     <?php endif; ?>
 </main>
 

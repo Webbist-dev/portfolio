@@ -16,7 +16,6 @@ body {
 
 p, blockquote, table, hr, pre {
     margin-bottom: $v-spacing-half;
-
 }
 
 hr {
@@ -225,9 +224,25 @@ label {
     }
 }
 
+// Form actions
+// ============
+.form-actions  {
+    overflow: hidden;
+
+    .form-submit {
+        float: left;
+    }
+
+    a {
+        float: right;
+        padding: rem(15px) 0;
+    }
+}
+
 a.button {
     color:#fff;
 }
+
 .button__container a,
 button, input[type="submit"],
 .button, %button {

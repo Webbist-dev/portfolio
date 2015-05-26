@@ -1,0 +1,59 @@
+.view-homepage {
+	padding:($gutter-width * 2) 0 $gutter-width;
+	overflow: hidden;
+
+	.views-row {
+		margin-bottom: $gutter-width;
+		position: relative;
+
+		img {
+			display: block;
+		}
+
+		.field-name-title {
+			position: absolute;
+			bottom:0;
+			left:0;
+			right:0;
+			margin:($gutter-width / 2);
+			
+			h3 {
+				margin-bottom: 0;
+			}
+
+			a {
+				padding:rem(5px) rem(15px);
+				background:rgba(255,255,255,0.7);
+				display: block;
+				color:$body_copy;
+			}
+		}
+	}
+	
+	// Large Top left
+	.views-row-1 {
+		@include span(6);
+	}
+
+	// Large Bottom Right
+	.views-row-8  {
+		@include span(6 last);
+	}
+	
+	// Small right
+	.views-row-3,
+	.views-row-5 {
+		@include span(3 last);
+	}
+	
+	// Small + medium left
+	.views-row-2,
+	.views-row-4,
+	.views-row-6,
+	.views-row-7,
+	.views-row-9 {
+		@include span(3);
+	}
+
+
+}

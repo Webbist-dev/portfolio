@@ -9,6 +9,13 @@
     width:100%;
     @include transition(all 0.4s ease-in-out);
 }
+
+// If logged in we want to see the admin bar
+.logged-in {
+	.header {
+		position: relative;
+	}
+}
    
 .header__content {
 	@include span(8 last);

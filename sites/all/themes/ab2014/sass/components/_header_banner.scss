@@ -1,6 +1,7 @@
 // Homepage banner
 .homepage__banner {
 	padding:$v-spacing;
+	overflow: hidden;
 }
 
 // Banner text large
@@ -20,7 +21,8 @@
 // Banner button
 .hp_b_btn {
 	margin: 0 auto;
-	width:rem(196px);
+	width:rem(370px);
+	
 	a {
 		@extend %button;
 		color:$white;
