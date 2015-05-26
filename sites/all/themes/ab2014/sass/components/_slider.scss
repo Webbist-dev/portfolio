@@ -61,25 +61,29 @@
 
 	& > nav span.current {
 		background-color: $tiltCurrent;
-		
 		opacity:1;
 	}
 
 	.slides .description {
-		width: 50%;
-		padding: 2em 4em;
-		font-size: 1.5em;
+		padding: 10% 0;
 		position: relative;
 		z-index: 1000;
 		opacity: 0;
+
+		h3 {
+			width: 50%;
+			font-size: rem(36px);
+			margin-bottom: $gutter-width;
+		}
+
+		p {
+			width: 50%;
+			font-size: rem(18px);
+		}
 	}
 
 	.no-js .description {
 		opacity: 1;
-	}
-
-	.description h2 {
-		font-size: 200%;
 	}
 
 	.tiltview {

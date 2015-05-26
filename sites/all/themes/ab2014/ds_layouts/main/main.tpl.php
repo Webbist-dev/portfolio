@@ -38,7 +38,7 @@
         <?php 
         if($node->field_hire_me[LANGUAGE_NONE][0]['value'] == 1)
         { 
-            echo('<a href="/contact" class="button">Hire me</a>'); 
+            echo('<a href="/contact" class="button">Considering new projects</a>'); 
         } else {
             echo('<span class="unavailable">Fully booked</a>');
         }
