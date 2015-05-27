@@ -73,6 +73,19 @@ h6, .h6 {
     font-size: rem($base-font-size);
 }
 
+.standard__header {
+    background:$primary_banner;
+}
+
+.standard__title {
+    padding:rem(40px) 0;
+
+    h1 {
+        font-size: rem(36px);
+        margin-bottom: 0;
+    }
+}
+
 // Lists
 ul, ol {
     padding-left: $v-spacing-three-quarter;

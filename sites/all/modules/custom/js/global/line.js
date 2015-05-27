@@ -18,7 +18,7 @@
             
                 $mainNav.append("<li id='line'></li>");
                 var $line = $("#line");
-                
+                console.log('cuntiflaps');
                 $line
                     .width($(".header .active-trail").width())
                     .css("left", $("li.active-trail a").position().left)

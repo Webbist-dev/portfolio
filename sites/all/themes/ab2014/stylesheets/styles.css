@@ -278,6 +278,16 @@ h5, .h5 {
 h6, .h6 {
   font-size: 0.9375rem; }
 
+.standard__header {
+  background: #e1e1e1; }
+
+.standard__title {
+  padding: 2.5rem 0; }
+
+.standard__title h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0; }
+
 ul, ol {
   padding-left: 1.125rem;
   margin-bottom: 1.125rem; }
@@ -603,6 +613,9 @@ img[src*='googleads'] {
 .main,
 .main_prefix {
   background: #e1e1e1; }
+
+.main-article {
+  background: #fff; }
 
 .faux {
   background: #2f3238;

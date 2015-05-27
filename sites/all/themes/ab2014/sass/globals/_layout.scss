@@ -28,10 +28,16 @@
 	margin-top:$gutter-width;
 }
 
+// Case study and homepage
 .main,
 .main_prefix {
 	background:$primary_banner;
 }  
+
+// Article main background change
+.main-article {
+	background:$white;
+}
 
 // Faux column 
 // ===========
