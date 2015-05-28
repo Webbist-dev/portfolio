@@ -29,7 +29,7 @@
    <<?php print $main_prefix_wrapper; ?> class="page-header<?php print $main_prefix_classes; ?>">
       <?php print $main_prefix; ?>
     </<?php print $main_prefix_wrapper; ?>>
-
+<div class="article">
   <div class="container">
     <<?php print $main_wrapper; ?> class="main-sidebar<?php print $main_classes; ?>">
       <?php print $main; ?>
@@ -39,6 +39,8 @@
       <?php print $sidebar; ?>
     </<?php print $sidebar_wrapper; ?>> 
   </div>
+   <div class="faux"></div>
+</div>
 </<?php print $layout_wrapper ?>>
 
 <!-- Needed to activate display suite support on forms -->

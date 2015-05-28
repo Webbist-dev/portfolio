@@ -118,12 +118,10 @@
 <!-- Main -->
 
 <main id="main" role="main" class="main-article clearfix">
-    <div class="container">
-        <div class="main__content">
-            <?php if ($page['content']): ?>
-                <?php print render($page['content']); ?>
-            <?php endif; ?>
-        </div>
+    <div class="main__content">
+        <?php if ($page['content']): ?>
+            <?php print render($page['content']); ?>
+        <?php endif; ?>
     </div>
 </main>
 
