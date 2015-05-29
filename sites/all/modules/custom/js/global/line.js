@@ -12,13 +12,13 @@
         line: function(){ 
             // Magic line function
             
-            if(!$('body').hasClass('front')) {
+            if($('body').hasClass('not-front')) {
                 var $el, leftPos, newWidth,
                 $mainNav = $(".header .menu");
             
                 $mainNav.append("<li id='line'></li>");
                 var $line = $("#line");
-                console.log('cuntiflaps');
+               
                 $line
                     .width($(".header .active-trail").width())
                     .css("left", $("li.active-trail a").position().left)

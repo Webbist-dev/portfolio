@@ -5,4 +5,12 @@
 	  position: relative;
 	  z-index: 10;
 	}
+
+	.sidebar {
+		
+		.content {
+			padding:$gutter-width;
+			background:$primary_banner;
+		}
+	}
 }

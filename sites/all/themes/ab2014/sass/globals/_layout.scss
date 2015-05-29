@@ -19,7 +19,7 @@
 .main-sidebar {
 	@include span(9);
 	background:$white;
-	padding: $gutter-width $v-spacing-half $v-spacing-double 0; 
+	padding: $gutter-width $gutter-width $v-spacing-double 0; 
 	min-height: rem(400px);
 }
 

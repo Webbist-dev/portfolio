@@ -10,9 +10,7 @@
 
         // The function to show/hide sidebar blocks based on value in the select 
         headerHeight: function(){ 
-            $(window).on("scroll touchmove", function () {
-              $("#header").toggleClass('scrolling', $(document).scrollTop() > 0);
-            });
+            
         }
     };
 

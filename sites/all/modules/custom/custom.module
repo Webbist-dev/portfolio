@@ -30,6 +30,7 @@ function custom_node_view($node, $view_mode, $langcode) {
   // if($node->type == 'homepage') {
   
   //}
+
     $node->content['#attached']['js'][] = array
     (
       'type' => 'file',
@@ -42,13 +43,13 @@ function custom_node_view($node, $view_mode, $langcode) {
     $node->content['#attached']['js'][] = array
     (
       'type' => 'file',
-      'data' => drupal_get_path('module', 'custom') . '/js/global/header.js',
+      'data' => drupal_get_path('module', 'custom') . '/js/global/line.js',
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'scope' => 'footer',
       'weight' => '999',
     );
-
+   
 
     // $node->content['#attached']['js'][] = array
     // (
@@ -61,15 +62,7 @@ function custom_node_view($node, $view_mode, $langcode) {
     // );
 
 
-    $node->content['#attached']['js'][] = array
-    (
-      'type' => 'file',
-      'data' => drupal_get_path('module', 'custom') . '/js/global/line.js',
-      'group' => JS_THEME,
-      'preprocess' => TRUE,
-      'scope' => 'footer',
-      'weight' => '999',
-    );
+   
 
   if($node->type == 'case_study') {
    

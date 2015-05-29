@@ -614,7 +614,7 @@ img[src*='googleads'] {
   float: left;
   margin-right: 1.96078%;
   background: #fff;
-  padding: 24px 12px 48px 0;
+  padding: 24px 24px 48px 0;
   min-height: 400px; }
 
 .sidebar {
@@ -1031,7 +1031,8 @@ html[xmlns] .slides {
   left: 0;
   width: 100px;
   height: 3px;
-  background: #9bbfce; }
+  background: #9bbfce;
+  margin: 0; }
 
 .main_prefix {
   background: #ddd; }
@@ -1818,3 +1819,7 @@ html[xmlns] .slides {
 .article .container {
   position: relative;
   z-index: 10; }
+
+.article .sidebar .content {
+  padding: 24px;
+  background: #e1e1e1; }
