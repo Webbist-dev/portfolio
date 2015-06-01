@@ -14,3 +14,27 @@
 		}
 	}
 }
+
+.blog-shelf {
+	background:$primary_banner;
+}
+
+.article__date, 
+.article__author, 
+.article__tags {
+	padding:$v-spacing-half 0;
+	float: left;
+	margin-right: $gutter-width;
+}
+
+
+.article__tags {
+	
+
+	a {
+
+		&:link, &:visited {
+
+		}
+	}
+}
