@@ -167,7 +167,11 @@ select {
     color: $body_copy;
     border: none;
     @include transition(.3s);
-    background:#fff;
+    background:$primary_banner;
+
+    &:focus, &:hover, &:active {
+        
+    }
 }
 
 input[type="text"],

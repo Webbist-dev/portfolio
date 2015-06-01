@@ -72,3 +72,20 @@
 .testimonial__author {
 	float: right;
 }
+
+
+// Listing page 
+// ============
+
+.view-case-study-listing {
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0;
+			list-style: none;
+			@include span(4);
+		}
+	}
+}

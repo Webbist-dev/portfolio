@@ -1,0 +1,22 @@
+.node-type-webform {
+
+	#main {
+		background:$white;
+		padding:$gutter-width 0;
+	}
+
+	.webform-component--name {
+		@include span(6);
+	}
+
+	.webform-component--email {
+		@include span(6 last);
+	}
+
+
+	// Required styling
+
+	.form-required {
+		color:$primary_blue;
+	}
+}

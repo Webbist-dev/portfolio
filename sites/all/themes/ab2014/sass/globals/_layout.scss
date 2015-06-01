@@ -39,6 +39,15 @@
 	background:$white;
 }
 
+.page-portfolio,
+.page-blog {
+
+	#main {
+		background:$white;
+		padding:$gutter-width 0;
+	}
+}
+
 // Faux column 
 // ===========
 .faux {
