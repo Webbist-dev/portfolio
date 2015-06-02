@@ -16,6 +16,9 @@
 	}
 }
 
+
+// Article Teaser
+// ==============
 .article__teaser {
 	margin-bottom: $gutter-width;
 	padding-bottom: $gutter-width;
@@ -24,27 +27,49 @@
 	// Title
 	.article__title h2 {
 		font-size: rem(45px);
+		margin-bottom: 0;
+		padding-bottom: $gutter-width;
+		border-bottom:1px solid $primary_banner;
+	}
+
+	.article__image {
+		margin-bottom: $gutter-width;
 	}
 
 	// Author and date
 	.article__meta {
 		float: left;
-		margin-right: rem(10px);
+		margin-right: rem(5px);
+		margin-bottom: 0;
+		padding: rem(14px) 0;
 	}
-	.label-inline {
 
-	}
-	.article__author {
-		
-	}
+	.label-inline,
+	.article__author,
 	.article__date {
-		
+		color: $line;
 	}
 
 	// Button
 	.article__button a {
 		@extend %button;
+		padding:rem(6px) rem(20px);
 	}
+
+	.sharethis-wrapper {
+		padding:rem(10px) 0;
+
+		span {
+			margin:0 0 0 rem(10px);
+		}
+	}
+}
+
+.pager-load-more a {
+	@extend %button;
+	margin:0 auto;
+	max-width:rem(220px);
+	display: block;
 }
 
 
@@ -72,7 +97,6 @@
 	}
 }
 
-
 // Blog shelf
 // ==========
 .blog-shelf {
@@ -80,19 +104,22 @@
 	overflow: hidden;
 	margin-bottom: $gutter-width;
 
-
 	.article__date, 
 	.article__author, 
 	.article__tags {
 		padding:$v-spacing-half 0;
 		float: left;
-		margin-left: $gutter-width;
 		margin-bottom: 0;
 	}
 
+	.article__author {
+		margin-left: rem(15px);
+		margin-right: rem(5px);
+	}
 
 	.article__tags {
-		
+		margin-left: rem(15px);
+
 		a {
 
 			&:link, &:visited {
@@ -101,34 +128,47 @@
 		}
 	}
 
-
-	// Share buttons
-	// =============
 	.sharethis-wrapper {
+		padding: rem(8px);
 
 		span {
-			display: block;
-			width: rem(30px);
-			height: rem(30px);
-			background-repeat: no-repeat;
-			background-position: center;
+			margin:0 rem(5px);
 		}
-	}
-
-	.st_facebook_custom {
-		// background-color: ;
-		// background-image: url('');
-	}
-
-	.st_twitter_custom {
-		// background-color: ;
-		// background-image: url('');
-	}
-
-	.st_linkedin_custom {
-		// background-color: ;
-		// background-image: url('');
 	}
 }
 
+// Share buttons
+// =============
+.sharethis-wrapper {
+	float: right;
+	
+	span {
+		display: block;
+		width: rem(30px);
+		height: rem(30px);
+		@include background-size(cover);
+		background-repeat: no-repeat;
+		background-position: center;
+		display: block;
+		float: right;
+		opacity: 0.7;
+		@include transition(all 0.3s ease-in-out);
 
+		&:hover, &:focus, &:active {
+			cursor: pointer;
+			opacity:1;
+		}
+	}
+}
+
+.st_facebook_custom {
+	 background-image: url('../images/facebook.png');
+}
+
+.st_twitter_custom {
+	 background-image: url('../images/twitter.png');
+}
+
+.st_linkedin_custom {
+	 background-image: url('../images/linkedin.png');
+}

@@ -26,6 +26,16 @@
 .sidebar {
 	@include span(3 last);
 	margin-top:$gutter-width;
+	margin-bottom: $gutter-width;
+
+	.block-views {
+
+		h2 {
+			background:$primary_banner;
+			padding:$v-spacing-half $gutter-width;
+			margin-bottom: rem(2px);
+		}
+	}
 }
 
 // Case study and homepage

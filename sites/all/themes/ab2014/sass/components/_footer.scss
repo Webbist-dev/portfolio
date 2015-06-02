@@ -128,6 +128,7 @@
 			font-size: rem(15px);
 			font-weight: bold;
 			margin-bottom: rem(20px);
+			@include transition(all 0.3s ease-in-out);
 
 			&:hover {
 				color:$hover;
